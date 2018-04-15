@@ -28,7 +28,7 @@ char **get_tokens(char *line)
 	unsigned int i = 0;
 	const char *delim = " \t";
 
-	tokens = malloc(sizeof(char *) * 10);
+	tokens = malloc(sizeof(char *) * TOKEN_MAX);
 	if (tokens == NULL)
 	{
 		pstring("malloc() failed in get_tokens().\n");

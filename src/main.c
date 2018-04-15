@@ -14,8 +14,10 @@ int main(void)
 		strip_line(line);
 		tokens = get_tokens(line);
 		child = fork();
-		run_cmd(tokens, child);
+		if (run_cmd(tokens, child) == 0)
+			return (0);
 	}
+	free(tokens);
 	free(line);
 	return (0);
 }
