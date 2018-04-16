@@ -1,7 +1,3 @@
-/**
- * exec_functions.c: contains functions related to fork and execution of
- * processes
- */
 #include "../lib/shelly.h"
 /**
  * run_cmd - Executes a command from the shell prompt

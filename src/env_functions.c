@@ -1,6 +1,3 @@
-/**
- * env_functions.c: contains functions related to evironment variables
- */
 #include "../lib/shelly.h"
 /**
  * get_path - Retrieves the PATH environment variable of a process.

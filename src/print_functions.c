@@ -1,6 +1,3 @@
-/**
- * print_functions.c: contains functions related to printing to stdout
- */
 #include "../lib/shelly.h"
 /**
  * pchar - prints a single character to stdout
@@ -19,6 +16,7 @@ int pchar(const char c)
 int pstring(const char *str)
 {
 	int i = 0;
+
 	while (str[i] != '\0')
 	{
 		pchar(str[i]);

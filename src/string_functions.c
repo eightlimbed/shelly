@@ -1,6 +1,3 @@
-/**
- * strings_functions.c: contains functions related to strings
- */
 #include "../lib/shelly.h"
 /**
  * slen - Counts the number of characters in a string

@@ -1,11 +1,8 @@
-/**
- * parsing_functions.c: contains functions related to parsing shell input
- */
 #include "../lib/shelly.h"
 /**
  * strip_line - Parses `line` from `getline()` in main.c to get rid of the
  * trailing newline.
- * @line: pointer to buffer containing user input (char *)
+ * @str: pointer to buffer containing user input (char *)
  * Return: pointer to new line, or NULL if malloc() failed.
  */
 void strip_line(char *str)
@@ -19,7 +16,8 @@ void strip_line(char *str)
 /**
  * get_tokens - Parses `line` from `getline()` to create tokens for `execve`.
  * @line: pointer to buffer containing user input (char *)
- * Return: pointer to an array of strings (char **), or NULL if malloc() failed.
+ * Return: pointer to an array of strings (char **), or NULL
+ * if malloc() failed.
  */
 char **get_tokens(char *line)
 {
