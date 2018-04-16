@@ -27,27 +27,10 @@ int run_cmd(char **tokens, pid_t child)
 		path = get_path(environ);
 		dirs = split_path(path);
 		cmd = search_path(dirs, tokens[0]);
-		if (cmd == NULL && scompare(tokens[0], "exit") != 0)
-		{
+		if (cmd == NULL)
 			printf("command not found: %s\n", tokens[0]);
-			return (1);
-		}
-		if (cmd)
-			execve(cmd, tokens, NULL);
-		/* check if tokens[0] is a builtin ("exit", or "env") */
-		if (scompare(tokens[0], "exit") == 0)
-		{
-			return (0);
-		}
-		else if (scompare(tokens[0], "env") == 0)
-		{
-			printf("in hurr\n");
-			printenv();
-		}
 		else
-		/* execve will only return on failure */
-		pstring("Error in execve() in run_cmd().\n");
-		exit(EXIT_FAILURE);
+			execve(cmd, tokens, NULL);
 	}
 	else
 	{
@@ -75,5 +58,5 @@ char *search_path(char **dirs, char *cmd)
 			return (fullcmd);
 		i++;
 	}
-	return (dirs[i]);
+	return (NULL);
 }

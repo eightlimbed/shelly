@@ -69,8 +69,8 @@ unsigned int scompare(char *s1, char *s2)
 	{
 		if (s1[i] == s2[i])
 			i++;
+		else
+			return (1);
 	}
-	if (s1[i] == s2[i])
-		return (0);
-	return (1);
+	return (0);
 }

@@ -15,7 +15,7 @@ int main(void)
 		tokens = get_tokens(line);
 		child = fork();
 		if (run_cmd(tokens, child) == 0)
-			return (0);
+			break;
 	}
 	free(tokens);
 	free(line);
