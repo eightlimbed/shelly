@@ -1,4 +1,4 @@
-# Shelly
+# Simple Shell
 ## A UNIX command line interpreter
 
 ![demo of shelly](images/shelly.gif)
